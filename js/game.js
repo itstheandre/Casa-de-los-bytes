@@ -1,5 +1,6 @@
 class Game {
   constructor() {
+    this.level = 0;
     this.map = [
       // map
       [
@@ -13,7 +14,7 @@ class Game {
         [1, 1, 0, 0, 0, 1, 0, 1, 0, 0], // 6
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 7
         [0, 1, 1, 1, 1, 1, 1, 1, 0, 0], // 8
-        [0, 0, 0, 0, 0, 1, 0, 1, 0, 2] // 9
+        [0, 0, 0, 0, 0, 0, 0, 1, 0, 2] // 9
       ],
       [
         // first floor
@@ -49,11 +50,21 @@ class Game {
   }
 
   draw() {
-    for (let i = 0; i < this.map.length; i++) {
-      for (let j = 0; j < this.map[i].length; i++) {
-        for (let k = 0; k < this, map[i][j].length; k++) {
-          if (this.map[i][j][k] === 0) background(255, 204, 0);
-          if (this.map[i][j][k] === 1) background("green");
+    for (let j = 0; j < this.map[this.level].length; j++) {
+      for (let k = 0; k < this.map[this.level][j].length; k++) {
+        if (this.map[this.level][j][k] === 0)
+          rect(gridSize * k, gridSize * j, gridSize, gridSize);
+        if (this.map[this.level][j][k] === 1) {
+          push();
+          fill("blue");
+          rect(gridSize * k, gridSize * j, gridSize, gridSize);
+          pop();
+        }
+        if (this.map[this.level][j][k] === 2) {
+          push();
+          fill("orange");
+          rect(gridSize * k, gridSize * j, gridSize, gridSize);
+          pop();
         }
       }
     }

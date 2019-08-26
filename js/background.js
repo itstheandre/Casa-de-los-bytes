@@ -1,4 +1,4 @@
-class Background {
+/* class Background {
   constructor() {
     //   this.xSky = 0;
     //   this.xClouds = 0;
@@ -7,6 +7,7 @@ class Background {
 
   setup() {
     this.grid = loadImage("assets/Grid.png"); // p5 function
+   
   }
   draw() {
     // this.xSky = (this.xSky - 5) % width;
@@ -36,3 +37,4 @@ class Background {
     image(this.bgForest, this.xForest + width, 230, width);
   }
 }
+ */
