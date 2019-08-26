@@ -1,3 +1,33 @@
+class Guard {
+  constructor(row, column, orientation) {
+    this.row = row * gridSize;
+    this.column = column * gridSize;
+    this.orientation = orientation;
+  }
+
+  preload() {
+    //
+  }
+
+  draw() {
+    //
+    if (this.orientation === "down") {
+      image(guardFront, this.column, this.row, gridSize, gridSize);
+    }
+    if (this.orientation === "left") {
+      image(guardLeft, this.column, this.row, gridSize, gridSize);
+    }
+    if (this.orientation === "right") {
+      image(guardRight, this.column, this.row, gridSize, gridSize);
+    }
+    if (this.orientation === "up") {
+      image(guardBack, this.column, this.row, gridSize, gridSize);
+    }
+
+    //  if(this.img === guardFront)
+  }
+}
+/* 
 class Player {
   constructor(row, column) {
     this.row = row * gridSize;
@@ -90,3 +120,39 @@ class Player {
     }
   }
 }
+ */
+/* 
+class stillGuard extends Guard {
+  constructor(column, row) {
+    super(column, row);
+  }
+}
+ */
+/* 
+
+-------------
+Light - +2 grids, depending on direction.
+if (guardFront) light is x++
+if (guardLeft) light is y--
+if(guardRight) light is y++
+if (guardBack) light is x--
+
+------------
+
+Moving Guards constructor maybe takes steps
+
+3 step guards
+   3 steps forward, 1 step to the side, turn back, 3 steps fotward, 1 step to the side.
+
+1 step guard
+   1 step forward, 1 step to the side, turn back, 1 step to the side, repeat
+----------------
+
+Turning Guards ( 0 steps here)
+
+   turn to thr right every second, maybe.
+
+   ------
+
+   Infinite Loop
+*/
