@@ -3,7 +3,7 @@ class Game {
     this.level = 0;
     this.map = mapArr;
     this.player = new Player(9, 6);
-    this.guardsBasement = guards.map(guard => new Guard(...guard));
+    this.guards = guards[this.level].map(guard => new Guard(...guard));
   }
 
   setup() {
@@ -30,11 +30,15 @@ class Game {
       }
     }
 
-    if (this.level === 0) {
-      this.player.draw();
+    // if (this.level === 0) {
+    this.player.draw();
 
-      this.guardsBasement.forEach(guard => guard.draw());
-    }
+    this.guards.forEach(guard => guard.draw());
+  }
+
+  newLevel() {
+    this.level++;
+    this.guards = guards[this.level].map(guard => new Guard(...guard));
   }
 }
 

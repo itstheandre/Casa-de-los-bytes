@@ -23,6 +23,9 @@ class Player {
     if (this.orientation === "up") {
       image(thiefBack, this.column, this.row, gridSize, gridSize);
     }
+
+    if (game.map[game.level][this.row / gridSize][this.column / gridSize] === 2)
+      game.newLevel();
     // fill("red");
     // rect(this.row, this.column, gridSize, gridSize);
   }
@@ -34,9 +37,7 @@ class Player {
       this.orientation = "left";
 
       let wallLeft =
-        game.map[game.level][player1.row / gridSize][
-          player1.column / gridSize - 1
-        ];
+        game.map[game.level][this.row / gridSize][this.column / gridSize - 1];
 
       if (wallLeft === 1) return;
       this.column -= gridSize;
@@ -49,10 +50,8 @@ class Player {
     if (keyCode === UP_ARROW) {
       this.orientation = "up";
       let wallUp =
-        game.map[game.level][player1.row / gridSize - 1] &&
-        game.map[game.level][player1.row / gridSize - 1][
-          player1.column / gridSize
-        ];
+        game.map[game.level][this.row / gridSize - 1] &&
+        game.map[game.level][this.row / gridSize - 1][this.column / gridSize];
       if (wallUp === 1) return;
 
       this.row -= gridSize;
@@ -65,9 +64,7 @@ class Player {
       this.orientation = "right";
 
       let wallRight =
-        game.map[game.level][player1.row / gridSize][
-          player1.column / gridSize + 1
-        ];
+        game.map[game.level][this.row / gridSize][this.column / gridSize + 1];
 
       if (wallRight === 1) return;
 
@@ -80,13 +77,17 @@ class Player {
     if (keyCode === DOWN_ARROW) {
       this.orientation = "down";
       let wallDown =
-        game.map[game.level][player1.row / gridSize + 1] &&
-        game.map[game.level][player1.row / gridSize + 1][
-          player1.column / gridSize
-        ];
+        game.map[game.level][this.row / gridSize + 1] &&
+        game.map[game.level][this.row / gridSize + 1][this.column / gridSize];
       if (wallDown === 1) return;
+      // if (wallDown === 2) game.newLevel()
       this.row += gridSize;
+
       if (this.row > lastRowCell) this.row = lastRowCell;
     }
   }
+
+  /* checkNewLevel() {
+    if (this.column /gridSize  === game.map[game.level])
+  } */
 }

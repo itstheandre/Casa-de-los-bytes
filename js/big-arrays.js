@@ -41,9 +41,6 @@ const mapArr = [
   ]
 ];
 
-const guardsZero = [[7, 3, "up"], [7, 8, "up"]];
-const guardsOne = [[6, 9, "up"]];
-
 const guards = [
   // map
   [
@@ -72,7 +69,7 @@ const guards = [
   ],
   [
     // Roof is on fire
-    [0, 0, "down"],
+    /* [0, 0, "down"],
     [0, 1, "down"],
     [0, 2, "down"],
     [0, 3, "down"],
@@ -85,6 +82,46 @@ const guards = [
     [2, 2, "down"],
     [2, 3, "down"],
     [3, 0, "down"],
-    [3, 1, "down"]
+    [4, 0, "down"],
+    [4, 1, "down"],
+    [4, 2, "down"],
+    [4, 3, "down"],
+    [4, 4, "down"],
+    [4, 5, "down"],
+    [4, 6, "down"],
+    [4, 7, "down"],
+    [4, 8, "down"],
+    [4, 9, "down"],
+    [0, 4, "down"],
+    [0, 5, "down"],
+    [0, 6, "down"],
+    [0, 7, "down"],
+    [0, 8, "down"],
+    [0, 9, "down"],
+    [1, 4, "down"],
+    [0, 5, "down"],
+    [0, 6, "down"],
+    [0, 7, "down"],
+    [0, 8, "down"],
+    [0, 9, "down"],
+    [0, 4, "down"],
+    [0, 4, "down"],
+    [0, 4, "down"],
+    [0, 4, "down"],
+    [0, 4, "down"] */
   ]
 ];
+
+for (let i = 0; i < 10; i++) {
+  for (let j = 0; j < 10; j++) {
+    if (i < 4 && j < 4) {
+      guards[2].push([i, j, "down"]);
+    }
+    if (i < 10 && j < 4) {
+      guards[2].push([i, j, "down"]);
+    }
+    if (i < 4 && j > 5) {
+      guards[2].push([i, j, "down"]);
+    }
+  }
+}
