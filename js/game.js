@@ -43,4 +43,19 @@ class Game {
       ]
     ];
   }
+
+  setup() {
+    this.grid = loadImage("assets/Grid.png");
+  }
+
+  draw() {
+    for (let i = 0; i < this.map.length; i++) {
+      for (let j = 0; j < this.map[i].length; i++) {
+        for (let k = 0; k < this, map[i][j].length; k++) {
+          if (this.map[i][j][k] === 0) background(255, 204, 0);
+          if (this.map[i][j][k] === 1) background("green");
+        }
+      }
+    }
+  }
 }

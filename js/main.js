@@ -4,3 +4,7 @@ function setup() {
   createCanvas(WIDTH, HEIGHT);
   background("red");
 }
+
+function draw() {
+  game.draw();
+}
