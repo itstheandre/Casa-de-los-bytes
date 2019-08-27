@@ -7,7 +7,7 @@ class Game {
   }
 
   setup() {
-    this.grid = loadImage("assets/Grid.png");
+    // this.grid = loadImage("assets/Grid.png");
   }
 
   draw() {
@@ -29,11 +29,12 @@ class Game {
         }
       }
     }
-
+    //
     // if (this.level === 0) {
     this.player.draw();
-
+    // this.collisionCheck();
     this.guards.forEach(guard => guard.draw());
+    // this.player.collisionCheck();
   }
 
   newLevel() {

@@ -80,14 +80,36 @@ class Player {
         game.map[game.level][this.row / gridSize + 1] &&
         game.map[game.level][this.row / gridSize + 1][this.column / gridSize];
       if (wallDown === 1) return;
-      // if (wallDown === 2) game.newLevel()
+      if (wallDown === 2) game.newLevel();
       this.row += gridSize;
 
       if (this.row > lastRowCell) this.row = lastRowCell;
     }
   }
 
-  /* checkNewLevel() {
-    if (this.column /gridSize  === game.map[game.level])
-  } */
+  collisionCheck() {
+    this.rect = {
+      top: this.row,
+      right: this.column + gridSize,
+      left: this.column,
+      bottom: this.row + gridSize
+    };
+
+    console.log("Anything");
+    game.guards.forEach((guard, i) => {
+      console.log(guard);
+      if (intersect(this.rect, guard.guardLight)) {
+        // debugger;
+        noLoop();
+      }
+    });
+    function intersect(r1, r2) {
+      return !(
+        r2.left >= r1.right ||
+        r2.right <= r1.left ||
+        r2.top >= r1.bottom ||
+        r2.bottom <= r1.top
+      );
+    }
+  }
 }

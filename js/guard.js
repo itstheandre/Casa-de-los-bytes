@@ -13,15 +13,44 @@ class Guard {
     //
     if (this.orientation === "down") {
       image(guardFront, this.column, this.row, gridSize, gridSize);
+
+      this.guardLight = {
+        top: this.row,
+        right: this.column + gridSize,
+        left: this.column,
+        bottom: this.row + gridSize * 3
+      };
+      // rect(this.row - gridSize, this.column + gridSize, gridSize, gridSize * 2);
     }
     if (this.orientation === "left") {
       image(guardLeft, this.column, this.row, gridSize, gridSize);
+
+      this.guardLight = {
+        top: this.row,
+        right: this.column + gridSize,
+        left: this.column - gridSize * 2,
+        bottom: this.row + gridSize
+      };
     }
     if (this.orientation === "right") {
       image(guardRight, this.column, this.row, gridSize, gridSize);
+
+      this.guardLight = {
+        top: this.row,
+        right: this.column + gridSize * 3,
+        left: this.column,
+        bottom: this.row + gridSize
+      };
     }
     if (this.orientation === "up") {
       image(guardBack, this.column, this.row, gridSize, gridSize);
+
+      this.guardLight = {
+        top: this.row - gridSize * 2,
+        right: this.column + gridSize,
+        left: this.column,
+        bottom: this.row + gridSize
+      };
     }
 
     //  if(this.img === guardFront)
