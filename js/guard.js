@@ -55,10 +55,46 @@ class Guard {
   }
 }
 
-class stillGuard extends Guard {
+class StillGuard extends Guard {
   constructor(column, row, orientation, rotation) {
     super(column, row, orientation);
     this.rotation = rotation;
+  }
+
+  rotateStill() {
+    if (this.orientation === undefined) return;
+    // Rotation Right
+    else if (this.rotation === "right") {
+      if (this.orientation === "down") {
+        this.orientation = "left";
+
+        // this.column -= gridSize;
+      } else if (this.orientation === "up") {
+        this.orientation = "right";
+
+        // this.column += gridSize;
+      } else if (this.orientation === "right") {
+        this.orientation = "down";
+        // this.row += gridSize;
+      } else if (this.orientation === "left") {
+        this.orientation = "up";
+        // this.row -= gridSize;
+      }
+    }
+    // Rotation LEFT
+    else if (this.rotation === "left") {
+      if (this.orientation === "left") {
+        this.orientation = "down";
+      } else if (this.orientation === "up") {
+        debugger;
+        this.orientation = "left";
+      } else if (this.orientation === "right") {
+        this.orientation = "up";
+      } else if (this.orientation === "down") {
+        this.orientation = "right";
+      }
+    }
+    // debugger;
   }
 }
 

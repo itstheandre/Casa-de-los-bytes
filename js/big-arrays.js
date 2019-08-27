@@ -107,3 +107,26 @@ const movingArr = [
     // roof
   ]
 ];
+
+const stillArr = [
+  // map
+  [
+    // basement
+    [1, 0, "down"],
+    [1, 3, "left"],
+    [3, 4, "left"]
+  ],
+  [
+    // first floor
+    [7, 0, "right", "right"],
+    [3, 3, "up", "right"],
+    [3, 5, "up", "left"],
+    [2, 6, "up", "left"],
+    [5, 3, "down", "left"],
+    [5, 5, "down", "right"],
+    [6, 6, "down", "right"]
+  ],
+  [
+    // Roof
+  ]
+];

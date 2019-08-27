@@ -3,9 +3,12 @@ class Game {
     this.level = 0;
     this.map = mapArr;
     this.player = new Player(9, 6);
-    // this.guards = guards[this.level].map(guard => new Guard(...guard));
+    this.guards = guards[this.level].map(guard => new Guard(...guard));
     this.movingGuards = movingArr[this.level].map(
       guard => new MovingGuard(...guard)
+    );
+    this.stillGuards = stillArr[this.level].map(
+      guard => new StillGuard(...guard)
     );
   }
 
@@ -37,7 +40,9 @@ class Game {
     // if (this.level === 0) {
     this.player.draw();
     // this.collisionCheck();
-    this.movingGuards.forEach(guard => guard.draw());
+    this.guards.forEach(guard => guard.draw());
+    // this.movingGuards.forEach(guard => guard.draw());
+    // this.stillGuards.forEach(guard => guard.draw());
     this.movingGuards.forEach(guard => guard.movement());
     // this.player.collisionCheck();
   }
@@ -45,6 +50,8 @@ class Game {
   newLevel() {
     this.level++;
     this.guards = guards[this.level].map(guard => new Guard(...guard));
+    // this.stillGuards = guards[this.level].map(guard => new Guard(...guard));
+    // this.movingGuards = guards[this.level].map(guard => new Guard(...guard));
   }
 }
 
