@@ -69,46 +69,6 @@ const guards = [
   ],
   [
     // Roof is on fire
-    /* [0, 0, "down"],
-    [0, 1, "down"],
-    [0, 2, "down"],
-    [0, 3, "down"],
-    [1, 0, "down"],
-    [1, 1, "down"],
-    [1, 2, "down"],
-    [1, 3, "down"],
-    [2, 0, "down"],
-    [2, 1, "down"],
-    [2, 2, "down"],
-    [2, 3, "down"],
-    [3, 0, "down"],
-    [4, 0, "down"],
-    [4, 1, "down"],
-    [4, 2, "down"],
-    [4, 3, "down"],
-    [4, 4, "down"],
-    [4, 5, "down"],
-    [4, 6, "down"],
-    [4, 7, "down"],
-    [4, 8, "down"],
-    [4, 9, "down"],
-    [0, 4, "down"],
-    [0, 5, "down"],
-    [0, 6, "down"],
-    [0, 7, "down"],
-    [0, 8, "down"],
-    [0, 9, "down"],
-    [1, 4, "down"],
-    [0, 5, "down"],
-    [0, 6, "down"],
-    [0, 7, "down"],
-    [0, 8, "down"],
-    [0, 9, "down"],
-    [0, 4, "down"],
-    [0, 4, "down"],
-    [0, 4, "down"],
-    [0, 4, "down"],
-    [0, 4, "down"] */
   ]
 ];
 
@@ -125,3 +85,25 @@ for (let i = 0; i < 10; i++) {
     }
   }
 }
+
+// constructor(column, row, orientation, rotation, steps) {
+const movingArr = [
+  // map
+  [
+    // basement
+    [6, 8, "up", "right", 2],
+    [7, 3, "up", "right", 1],
+    [5, 9, "down", "right", 2],
+    [1, 7, "right", "right", 2],
+    [2, 8, "left", "right", 2]
+  ],
+  [
+    // first floor
+    [5, 9, "up", "left", 2],
+    [5, 8, "down", "left", 2],
+    [2, 1, "up", "left", 1]
+  ],
+  [
+    // roof
+  ]
+];
