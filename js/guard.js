@@ -117,18 +117,18 @@ class StillGuard extends Guard {
 }
 
 /*  
-// Going Down
+  // Going Down
   this.row += gridSize;
-
-      // Going Right
-      this.column += gridSize;
-
-      // Going Up
-      this.row -= gridSize;
- 
-      // Going Left
-      this.column -= gridSize;
- */
+  
+  // Going Right
+  this.column += gridSize;
+  
+  // Going Up
+  this.row -= gridSize;
+  
+  // Going Left
+  this.column -= gridSize;
+  */
 
 //
 class MovingGuard extends Guard {
@@ -136,26 +136,55 @@ class MovingGuard extends Guard {
     super(column, row, orientation);
     this.rotation = rotation;
     this.steps = steps;
+    this.counter = 0;
+  }
+
+  action() {
+    //
+    if (frameCount % 2 === 0) {
+      if (this.steps === 1) {
+        if (this.counter % (this.steps + 2) === 0) {
+          this.movement();
+        } else if (this.counter % (this.steps + 2) === 1) {
+          this.rotate();
+        } else if (this.counter % (this.steps + 2) === 2) {
+          this.rotate();
+        }
+        this.counter++;
+      }
+      if (this.steps === 2) {
+        if (this.counter % (this.steps + 2) === 0) {
+          this.movement();
+        } else if (this.counter % (this.steps + 2) === 1) {
+          this.movement();
+        } else if (this.counter % (this.steps + 2) === 2) {
+          this.rotate();
+        } else {
+          this.rotate();
+        }
+        this.counter++;
+      }
+    }
   }
 
   movement() {
     //
     // console.log(frameCount, this.steps, frameCount % this.steps);
 
-    if (frameCount % 4 === 0) {
-      if (this.orientation === "down") {
-        // console.log(this.orientation);
-        this.row += gridSize;
-      } else if (this.orientation === "right") {
-        this.column += gridSize;
-      } else if (this.orientation === "up") {
-        this.row -= gridSize;
-      } else if (this.orientation === "left") {
-        this.column -= gridSize;
-      }
-      this.rotate();
-      // this.rotate();
+    //if (frameCount % 4 === 0) {
+    if (this.orientation === "down") {
+      // console.log(this.orientation);
+      this.row += gridSize;
+    } else if (this.orientation === "right") {
+      this.column += gridSize;
+    } else if (this.orientation === "up") {
+      this.row -= gridSize;
+    } else if (this.orientation === "left") {
+      this.column -= gridSize;
     }
+    // this.rotate();
+    // this.rotate();
+    //}
   }
 
   rotate() {

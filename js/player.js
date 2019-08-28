@@ -26,6 +26,7 @@ class Player {
 
     if (game.map[game.level][this.row / gridSize][this.column / gridSize] === 2)
       game.newLevel();
+
     // fill("red");
     // rect(this.row, this.column, gridSize, gridSize);
   }
@@ -100,16 +101,16 @@ class Player {
       // console.log(guard);
       if (intersect(this.rect, guard.guardLight)) {
         // debugger;
-        noLoop();
-        //  game.gameOver();
+        // noLoop();
+        game.gameOver();
       }
     });
     game.stillGuards.forEach((guard, i) => {
       // console.log(guard);
       if (intersect(this.rect, guard.guardLight)) {
         // debugger;
-        noLoop();
-        //  game.gameOver();
+        // noLoop();
+        game.gameOver();
       }
     });
 
@@ -117,8 +118,8 @@ class Player {
       // console.log(guard);
       if (intersect(this.rect, guard.guardLight)) {
         // debugger;
-        noLoop();
-        //  game.gameOver();
+        // noLoop();
+        game.gameOver();
       }
     });
     //  game.gameOver();
@@ -134,11 +135,33 @@ class Player {
   }
 }
 
-/* class WinningPlayer extends Player {
+class WinningPlayer extends Player {
   constructor(row, column) {
     super(row, column);
     this.orientation = "down";
   }
+
+  /*  draw() {
+    //
+    if (this.orientation === "down") {
+      image(thiefFront, this.column, this.row, gridSize, gridSize);
+    }
+    if (this.orientation === "left") {
+      image(thiefLeft, this.column, this.row, gridSize, gridSize);
+    }
+    if (this.orientation === "right") {
+      image(thiefRight, this.column, this.row, gridSize, gridSize);
+    }
+    if (this.orientation === "up") {
+      image(thiefBack, this.column, this.row, gridSize, gridSize);
+    }
+
+    if (game.map[game.level][this.row / gridSize][this.column / gridSize] === 2)
+      game.newLevel();
+
+    // fill("red");
+    // rect(this.row, this.column, gridSize, gridSize);
+  } */
 
   keyPressed() {
     //
@@ -148,4 +171,3 @@ class Player {
     //
   }
 }
- */
