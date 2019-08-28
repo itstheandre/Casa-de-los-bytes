@@ -10,48 +10,63 @@ class Game {
     this.stillGuards = stillArr[this.level].map(
       guard => new StillGuard(...guard)
     );
+    /* this.winningPlayers = winArr[this.level].map(
+      thief => new WinningPlayer(...thief)
+    ); */
+    // this.floor = floorArr[this.level];
   }
 
   setup() {
-    this.grid = loadImage("assets/Grid.png");
+    console.log(floorArr);
+    floorArr = [
+      //map
+      basementFloor,
+      // basement
+      firstFloor,
+      // Rooftop
+      rooftopFloor,
+      // Won!
+      gameOverImg,
+      // GameOver
+      gameOverImg
+    ];
+    console.log(floorArr);
+    //
   }
 
   draw() {
     frameRate(5);
-    for (let j = 0; j < this.map[this.level].length; j++) {
-      for (let k = 0; k < this.map[this.level][j].length; k++) {
-        if (this.map[this.level][j][k] === 0)
-          rect(gridSize * k, gridSize * j, gridSize, gridSize);
-        if (this.map[this.level][j][k] === 1) {
-          push();
-          fill("blue");
-          rect(gridSize * k, gridSize * j, gridSize, gridSize);
-          pop();
-        }
-        if (this.map[this.level][j][k] === 2) {
-          push();
-          fill("orange");
-          rect(gridSize * k, gridSize * j, gridSize, gridSize);
-          pop();
-        }
-      }
-    }
+    image(floorArr[this.level], 0, 0, WIDTH, HEIGHT);
+    console.log(this.level);
+    console.log(floorArr[0]);
+    // noLoop();
+
     //
-    // if (this.level === 0) {
     this.player.draw();
-    // this.collisionCheck();
+    // this.winningPlayers.draw();
     this.guards.forEach(guard => guard.draw());
-    // this.movingGuards.forEach(guard => guard.draw());
-    // this.stillGuards.forEach(guard => guard.draw());
+    this.movingGuards.forEach(guard => guard.draw());
+    this.stillGuards.forEach(guard => guard.draw());
+    this.stillGuards.forEach(guard => guard.action());
     this.movingGuards.forEach(guard => guard.movement());
     // this.player.collisionCheck();
   }
 
   newLevel() {
-    this.level++;
-    this.guards = guards[this.level].map(guard => new Guard(...guard));
-    // this.stillGuards = guards[this.level].map(guard => new Guard(...guard));
-    // this.movingGuards = guards[this.level].map(guard => new Guard(...guard));
+    if (this.level <= 2) {
+      this.level++;
+      this.guards = guards[this.level].map(guard => new Guard(...guard));
+      this.movingGuards = movingArr[this.level].map(
+        guard => new MovingGuard(...guard)
+      );
+      this.stillGuards = stillArr[this.level].map(
+        guard => new StillGuard(...guard)
+      );
+    }
+  }
+
+  gameOver() {
+    this.level = 4;
   }
 }
 

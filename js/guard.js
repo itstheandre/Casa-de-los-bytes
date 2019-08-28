@@ -73,10 +73,16 @@ class StillGuard extends Guard {
     this.rotation = rotation;
   }
 
+  action() {
+    if (frameCount % 6 === 0) {
+      this.rotateStill();
+    }
+  }
+
   rotateStill() {
-    if (this.orientation === undefined) return;
+    // if (this.orientation === undefined) return;
     // Rotation Right
-    else if (this.rotation === "right") {
+    if (this.rotation === "right") {
       if (this.orientation === "down") {
         this.orientation = "left";
 
@@ -98,7 +104,7 @@ class StillGuard extends Guard {
       if (this.orientation === "left") {
         this.orientation = "down";
       } else if (this.orientation === "up") {
-        debugger;
+        // debugger;
         this.orientation = "left";
       } else if (this.orientation === "right") {
         this.orientation = "up";
@@ -134,9 +140,9 @@ class MovingGuard extends Guard {
 
   movement() {
     //
-    console.log(frameCount, this.steps, frameCount % this.steps);
+    // console.log(frameCount, this.steps, frameCount % this.steps);
 
-    if (frameCount % 2 === 0) {
+    if (frameCount % 4 === 0) {
       if (this.orientation === "down") {
         // console.log(this.orientation);
         this.row += gridSize;
@@ -177,7 +183,7 @@ class MovingGuard extends Guard {
       if (this.orientation === "left") {
         this.orientation = "down";
       } else if (this.orientation === "up") {
-        debugger;
+        // debugger;
         this.orientation = "left";
       } else if (this.orientation === "right") {
         this.orientation = "up";

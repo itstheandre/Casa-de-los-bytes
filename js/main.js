@@ -2,7 +2,7 @@ const game = new Game();
 
 function setup() {
   createCanvas(WIDTH, HEIGHT);
-  background("red");
+  // background("red");
   musicLoop.play();
 }
 

@@ -8,6 +8,11 @@ let guardFront;
 let guardLeft;
 let guardRight;
 let guardBack;
+let basementFloor;
+let firstFloor;
+let rooftopFloor;
+let gameOverImg;
+let floorArr;
 
 function preload() {
   console.log("Something else");
@@ -21,5 +26,8 @@ function preload() {
   guardLeft = loadImage("assets/characters/light_guard/guard-left-light.png");
   guardRight = loadImage("assets/characters/light_guard/guard-right-light.png");
   guardBack = loadImage("assets/characters/light_guard/guard-back-light.png");
-  this.img = guardFront;
+  basementFloor = loadImage("assets/level_design/basement.png");
+  firstFloor = loadImage("assets/level_design/first_floor.png");
+  rooftopFloor = loadImage("assets/level_design/roof.png");
+  gameOverImg = loadImage("assets/level_design/game_over.png");
 }

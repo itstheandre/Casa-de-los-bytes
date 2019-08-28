@@ -95,14 +95,34 @@ class Player {
       bottom: this.row + gridSize
     };
 
-    console.log("Anything");
+    // console.log("Anything");
     game.guards.forEach((guard, i) => {
-      console.log(guard);
+      // console.log(guard);
       if (intersect(this.rect, guard.guardLight)) {
         // debugger;
         noLoop();
+        //  game.gameOver();
       }
     });
+    game.stillGuards.forEach((guard, i) => {
+      // console.log(guard);
+      if (intersect(this.rect, guard.guardLight)) {
+        // debugger;
+        noLoop();
+        //  game.gameOver();
+      }
+    });
+
+    game.movingGuards.forEach((guard, i) => {
+      // console.log(guard);
+      if (intersect(this.rect, guard.guardLight)) {
+        // debugger;
+        noLoop();
+        //  game.gameOver();
+      }
+    });
+    //  game.gameOver();
+
     function intersect(r1, r2) {
       return !(
         r2.left >= r1.right ||
@@ -113,3 +133,19 @@ class Player {
     }
   }
 }
+
+/* class WinningPlayer extends Player {
+  constructor(row, column) {
+    super(row, column);
+    this.orientation = "down";
+  }
+
+  keyPressed() {
+    //
+  }
+
+  collisionCheck() {
+    //
+  }
+}
+ */
