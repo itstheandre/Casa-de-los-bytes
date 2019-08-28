@@ -50,19 +50,40 @@ class Game {
       this.stillGuards.forEach(guard => guard.draw());
       this.stillGuards.forEach(guard => guard.action());
       this.movingGuards.forEach(guard => guard.action());
-      // this.player.collisionCheck();
+      this.player.collisionCheck();
     } else if (this.level === 3) {
       // clear();
       frameRate(5);
       image(floorArr[this.level], 0, 0, WIDTH, HEIGHT);
       this.winningPlayers.forEach(thief => thief.draw());
-      if (keyCode === 32) this.level = 0;
+      if (keyCode === 32) {
+        this.level = 0;
+        this.player = new Player(9, 6);
+        this.guards = guards[this.level].map(guard => new Guard(...guard));
+        this.movingGuards = movingArr[this.level].map(
+          guard => new MovingGuard(...guard)
+        );
+        this.stillGuards = stillArr[this.level].map(
+          guard => new StillGuard(...guard)
+        );
+        // this.level = 0;
+      }
     } else {
       frameRate(5);
       image(floorArr[4], 0, 0, WIDTH, HEIGHT);
       this.endGuards.forEach(guard => guard.draw());
       // this.player.draw();
-      if (keyCode === 32) this.level = 0;
+      if (keyCode === 32) {
+        this.level = 0;
+        this.guards = guards[this.level].map(guard => new Guard(...guard));
+        this.movingGuards = movingArr[this.level].map(
+          guard => new MovingGuard(...guard)
+        );
+        this.stillGuards = stillArr[this.level].map(
+          guard => new StillGuard(...guard)
+        );
+        this.player = new Player(9, 6);
+      }
     }
   }
 
@@ -81,7 +102,7 @@ class Game {
 
   gameOver() {
     this.level = 4;
-    console.log(this.winningPlayers);
+    // console.log(this.winningPlayers);
   }
 }
 

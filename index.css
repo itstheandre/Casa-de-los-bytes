@@ -1,3 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: black;
+}
+
+.start {
+  position: fixed;
+  width: 800px;
+  height: 800px;
+  background-color: red;
 }

@@ -1,14 +1,17 @@
 const game = new Game();
+let startGame = false;
 
 function setup() {
   createCanvas(WIDTH, HEIGHT);
   // background("red");
-  musicLoop.play();
+  if (startGame) musicLoop.play();
 }
 
 function draw() {
-  game.setup();
-  game.draw();
+  if (startGame) {
+    game.setup();
+    game.draw();
+  }
   /* 
   if (game.level === 1) {
     player2.draw();
