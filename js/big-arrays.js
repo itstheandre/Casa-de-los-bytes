@@ -1,5 +1,3 @@
-// let floorArr;
-
 const mapArr = [
   // map
 
@@ -61,31 +59,9 @@ const mapArr = [
 
 const guards = [
   // map
-  [
-    [1, 0, "down"],
-    [3, 4, "left"],
-    [1, 3, "left"]
-    /* 
-    [4, 9, "down"],
-    
-    
-    
-    [2, 6, "up"],
-    [1, 9, "down"] */
-  ],
+  [[1, 0, "down"], [3, 4, "left"], [1, 3, "left"]],
   // basement
-  [
-    /* [6, 9, "up"],
-    [6, 6, "up"],
-    [7, 0, "right"],
-    [5, 3, "left"],
-    [5, 5, "down"],
-    [4, 8, "down"],
-    [3, 3, "down"],
-    [3, 5, "left"],
-    [2, 1, "up"],
-    [2, 6, "up"] */
-  ],
+  [],
   // first floor
   [], // ROOF ARRAY
   // empty array where for loop below pushes guard
@@ -119,6 +95,7 @@ const guards = [
     [6, 9, "down"]
   ]
 ];
+
 // Roof Guard Creation
 for (let i = 0; i < 10; i++) {
   for (let j = 0; j < 10; j++) {
@@ -134,7 +111,6 @@ for (let i = 0; i < 10; i++) {
   }
 }
 
-// constructor(column, row, orientation, rotation, steps) {
 const movingArr = [
   // map
   [
@@ -160,12 +136,7 @@ const movingArr = [
 
 const stillArr = [
   // map
-  [
-    //
-    /* [1, 0, "down", "right"],
-    [1, 3, "left", "right"],
-    [3, 4, "left", "right"] */
-  ],
+  [],
   // basement
   [
     [7, 0, "right", "right"],
@@ -223,5 +194,5 @@ const winArr = [
     [6, 9]
   ],
   []
-  // Game Ove
+  // Game Over
 ];

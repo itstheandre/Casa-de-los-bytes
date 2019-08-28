@@ -5,9 +5,7 @@ class Player {
     this.orientation = "down";
   }
 
-  preload() {
-    //
-  }
+  preload() {}
 
   draw() {
     //
@@ -26,9 +24,6 @@ class Player {
 
     if (game.map[game.level][this.row / gridSize][this.column / gridSize] === 2)
       game.newLevel();
-
-    // fill("red");
-    // rect(this.row, this.column, gridSize, gridSize);
   }
 
   keyPressed() {
@@ -96,33 +91,22 @@ class Player {
       bottom: this.row + gridSize
     };
 
-    // console.log("Anything");
     game.guards.forEach((guard, i) => {
-      // console.log(guard);
       if (intersect(this.rect, guard.guardLight)) {
-        // debugger;
-        // noLoop();
         game.gameOver();
       }
     });
     game.stillGuards.forEach((guard, i) => {
-      // console.log(guard);
       if (intersect(this.rect, guard.guardLight)) {
-        // debugger;
-        // noLoop();
         game.gameOver();
       }
     });
 
     game.movingGuards.forEach((guard, i) => {
-      // console.log(guard);
       if (intersect(this.rect, guard.guardLight)) {
-        // debugger;
-        // noLoop();
         game.gameOver();
       }
     });
-    //  game.gameOver();
 
     function intersect(r1, r2) {
       return !(
@@ -132,42 +116,5 @@ class Player {
         r2.bottom <= r1.top
       );
     }
-  }
-}
-
-class WinningPlayer extends Player {
-  constructor(row, column) {
-    super(row, column);
-    this.orientation = "down";
-  }
-
-  /*  draw() {
-    //
-    if (this.orientation === "down") {
-      image(thiefFront, this.column, this.row, gridSize, gridSize);
-    }
-    if (this.orientation === "left") {
-      image(thiefLeft, this.column, this.row, gridSize, gridSize);
-    }
-    if (this.orientation === "right") {
-      image(thiefRight, this.column, this.row, gridSize, gridSize);
-    }
-    if (this.orientation === "up") {
-      image(thiefBack, this.column, this.row, gridSize, gridSize);
-    }
-
-    if (game.map[game.level][this.row / gridSize][this.column / gridSize] === 2)
-      game.newLevel();
-
-    // fill("red");
-    // rect(this.row, this.column, gridSize, gridSize);
-  } */
-
-  keyPressed() {
-    //
-  }
-
-  collisionCheck() {
-    //
   }
 }
