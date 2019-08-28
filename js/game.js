@@ -13,7 +13,7 @@ class Game {
   }
 
   setup() {
-    // this.grid = loadImage("assets/Grid.png");
+    this.grid = loadImage("assets/Grid.png");
   }
 
   draw() {

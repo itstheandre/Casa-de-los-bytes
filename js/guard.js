@@ -12,7 +12,7 @@ class Guard {
   draw() {
     //
     if (this.orientation === "down") {
-      image(guardFront, this.column, this.row, gridSize, gridSize);
+      image(guardFront, this.column, this.row, gridSize, gridSize * 3);
 
       this.guardLight = {
         top: this.row,
@@ -23,7 +23,13 @@ class Guard {
       // rect(this.row - gridSize, this.column + gridSize, gridSize, gridSize * 2);
     }
     if (this.orientation === "left") {
-      image(guardLeft, this.column, this.row, gridSize, gridSize);
+      image(
+        guardLeft,
+        this.column - gridSize * 2,
+        this.row,
+        gridSize * 3,
+        gridSize
+      );
 
       this.guardLight = {
         top: this.row,
@@ -33,7 +39,7 @@ class Guard {
       };
     }
     if (this.orientation === "right") {
-      image(guardRight, this.column, this.row, gridSize, gridSize);
+      image(guardRight, this.column, this.row, gridSize * 3, gridSize);
 
       this.guardLight = {
         top: this.row,
@@ -43,7 +49,13 @@ class Guard {
       };
     }
     if (this.orientation === "up") {
-      image(guardBack, this.column, this.row, gridSize, gridSize);
+      image(
+        guardBack,
+        this.column,
+        this.row - gridSize * 2,
+        gridSize,
+        gridSize * 3
+      );
 
       this.guardLight = {
         top: this.row - gridSize * 2,

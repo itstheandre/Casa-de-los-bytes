@@ -7,6 +7,7 @@ function setup() {
 }
 
 function draw() {
+  game.setup();
   game.draw();
   /* 
   if (game.level === 1) {
