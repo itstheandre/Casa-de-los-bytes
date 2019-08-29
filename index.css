@@ -13,5 +13,32 @@ body {
   position: fixed;
   width: 800px;
   height: 800px;
-  background-color: red;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3em;
+}
+
+.start > h1 {
+  font-size: 2.5em;
+}
+button {
+  background-color: white;
+  padding: 1em;
+  border: none;
+  font-weight: 900;
+  font-size: 1em;
+  width: 200px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.rules-and-start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
