@@ -15,5 +15,5 @@ function draw() {
 }
 
 function keyPressed() {
-  game.player.keyPressed();
+  if (game.level !== 4) game.player.keyPressed();
 }
