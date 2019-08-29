@@ -7,13 +7,16 @@
 body {
   background-color: black;
   font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .start {
   position: fixed;
   width: 800px;
   height: 800px;
-  background-color: gray;
+  background-color: #e1e5ea;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -26,8 +29,8 @@ body {
 }
 button {
   background-color: white;
+  border-color: black;
   padding: 1em;
-  border: none;
   font-weight: 900;
   font-size: 1em;
   width: 200px;
@@ -39,6 +42,29 @@ li {
 
 .rules-and-start {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.instructions {
+  width: 40%;
+}
+
+.instructions li {
+  padding: 0.8em;
+  font-size: 1.3em;
+}
+
+.example-img {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 4em;
+}
+
+.start-now {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3em;
   align-items: center;
 }
