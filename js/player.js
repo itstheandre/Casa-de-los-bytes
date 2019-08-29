@@ -29,7 +29,7 @@ class Player {
   keyPressed() {
     // Going Left
 
-    if (keyCode === LEFT_ARROW) {
+    if (keyCode === LEFT_ARROW || keyCode === 65) {
       this.orientation = "left";
 
       let wallLeft =
@@ -43,7 +43,7 @@ class Player {
 
     // Going Up
 
-    if (keyCode === UP_ARROW) {
+    if (keyCode === UP_ARROW || keyCode === 87) {
       this.orientation = "up";
       let wallUp =
         game.map[game.level][this.row / gridSize - 1] &&
@@ -56,7 +56,7 @@ class Player {
 
     // Going Right
 
-    if (keyCode === RIGHT_ARROW) {
+    if (keyCode === RIGHT_ARROW || keyCode === 68) {
       this.orientation = "right";
 
       let wallRight =
@@ -70,7 +70,7 @@ class Player {
 
     // Going Down
 
-    if (keyCode === DOWN_ARROW) {
+    if (keyCode === DOWN_ARROW || keyCode === 83) {
       this.orientation = "down";
       let wallDown =
         game.map[game.level][this.row / gridSize + 1] &&
