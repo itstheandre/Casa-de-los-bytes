@@ -28,13 +28,17 @@ Each level is a nested array with 10 other arrays in themn. 0s represent "walkab
 
 ## Player
 The player is built with 2 properties that have to be created - it's position in the row and column. The player does not have a huge amount of functions. Mostly movement functions that define how it moves, where it can move, and what happens when it either is seen by a guard, or reaches a stair (2s in the grid). Reaching the stairs triggers a new level, getting caught, ends the game and forces you to start over.
+
+
 ![example of Player](https://github.com/itstheandre/Casa-de-los-bytes/blob/master/assets/characters/thief-still-front.png)
 
 ## Guard(s)
 The guards are the real trouble makers in this game. There are guards on every level, each of them with its own properties. So the idea was to first create a guard Class and from that point on figure out movements, rotations, sizes, etc.
 The guards have a different "size". Originally they were thought with the same size of the player - 100x100, but then I would have to figure out how to get a "field of view" to them. Creating a guard with a light already in the image turned out to be the easiest, most sensible solution for the time restraint.
 Here, it is important to define this Object's dimensions, and it's action area, because it's important for whoever is playing the game to immediately know where the thief can go without getting caught.
-[example of Guard](https://github.com/itstheandre/Casa-de-los-bytes/blob/master/assets/characters/light_guard/guard-right-light.png)
+
+
+![example of Guard](https://github.com/itstheandre/Casa-de-los-bytes/blob/master/assets/characters/light_guard/guard-right-light.png)
 
 ### GuardExtensions
 Like I mentioned, there are different types of guards - there are 3:
