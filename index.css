@@ -7,64 +7,22 @@
 body {
   background-color: black;
   font-family: "Roboto", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+}
+
+.p5Canvas {
+  position: fixed;
+
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .start {
   position: fixed;
+
+  left: 50%;
+  transform: translateX(-50%);
+
   width: 800px;
   height: 800px;
-  background-color: #e1e5ea;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 3em;
-}
 
-.start > h1 {
-  font-size: 2.5em;
-}
-button {
-  background-color: white;
-  border-color: black;
-  padding: 1em;
-  font-weight: 900;
-  font-size: 1em;
-  width: 200px;
-}
-
-li {
-  list-style-type: none;
-}
-
-.rules-and-start {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.instructions {
-  width: 40%;
-}
-
-.instructions li {
-  padding: 0.8em;
-  font-size: 1.3em;
-}
-
-.example-img {
-  height: 300px;
-  width: 300px;
-  margin-bottom: 4em;
-}
-
-.start-now {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 3em;
-  align-items: center;
-}

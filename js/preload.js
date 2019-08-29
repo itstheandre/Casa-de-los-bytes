@@ -11,6 +11,7 @@ let guardBack;
 let basementFloor;
 let firstFloor;
 let rooftopFloor;
+let congratsImg;
 let gameOverImg;
 let floorArr;
 
@@ -34,5 +35,6 @@ function preload() {
   basementFloor = loadImage("assets/level_design/basement.png");
   firstFloor = loadImage("assets/level_design/first_floor.png");
   rooftopFloor = loadImage("assets/level_design/roof.png");
-  gameOverImg = loadImage("assets/level_design/game_over.png");
+  congratsImg = loadImage("assets/level_design/Congrats.png");
+  gameOverImg = loadImage("assets/level_design/Game-over.png");
 }

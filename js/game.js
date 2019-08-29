@@ -23,7 +23,7 @@ class Game {
       // Rooftop
       rooftopFloor,
       // Won!
-      gameOverImg,
+      congratsImg,
       // GameOver
       gameOverImg
     ];
@@ -45,7 +45,7 @@ class Game {
     } else if (this.level === 3) {
       frameRate(5);
       image(floorArr[this.level], 0, 0, WIDTH, HEIGHT);
-      this.winningPlayers.forEach(thief => thief.draw());
+      // this.winningPlayers.forEach(thief => thief.draw());
       if (keyCode === 32) {
         this.level = 0;
         this.player = new Player(9, 6);
@@ -60,7 +60,7 @@ class Game {
     } else {
       frameRate(5);
       image(floorArr[4], 0, 0, WIDTH, HEIGHT);
-      this.endGuards.forEach(guard => guard.draw());
+      // this.endGuards.forEach(guard => guard.draw());
       if (keyCode === 32) {
         this.level = 0;
         this.guards = guards[this.level].map(guard => new Guard(...guard));
