@@ -26,12 +26,12 @@ function preload() {
   thiefBack = loadImage("assets/characters/thief-still-back.png");
 
   // Guard positioning
-  guardFront = loadImage("assets/characters/light_guard/guard-front-light.png");
-  guardLeft = loadImage("assets/characters/light_guard/guard-left-light.png");
-  guardRight = loadImage("assets/characters/light_guard/guard-right-light.png");
+  guardFront = loadImage("assets/characters/guard-front-light.png");
+  guardLeft = loadImage("assets/characters/guard-left-light.png");
+  guardRight = loadImage("assets/characters/guard-right-light.png");
 
   // floor design
-  guardBack = loadImage("assets/characters/light_guard/guard-back-light.png");
+  guardBack = loadImage("assets/characters/guard-back-light.png");
   basementFloor = loadImage("assets/level_design/basement.png");
   firstFloor = loadImage("assets/level_design/first_floor.png");
   rooftopFloor = loadImage("assets/level_design/roof.png");

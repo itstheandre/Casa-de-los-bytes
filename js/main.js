@@ -4,7 +4,7 @@ let startGame = false;
 function setup() {
   createCanvas(WIDTH, HEIGHT);
   initGame();
-  if (startGame) musicLoop.play();
+  musicLoop.play();
 }
 
 function draw() {

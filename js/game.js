@@ -27,6 +27,8 @@ class Game {
       // GameOver
       gameOverImg
     ];
+    // if (startGame) musicLoop.play();
+
     //
   }
 

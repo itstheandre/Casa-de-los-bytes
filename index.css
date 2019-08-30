@@ -23,6 +23,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
 
-  width: 800px;
-  height: 800px;
+  width: 500px;
+  height: 500px;
 }
