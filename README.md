@@ -1,6 +1,5 @@
 # Casa-de-los-bytes
 
-test
 Ironhack P5 Game Project
 
 # Introduction
