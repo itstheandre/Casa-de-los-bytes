@@ -1,15 +1,15 @@
-# Casa-de-los-bytes
+# Casa-de-los-byts
 
 Ironhack P5 Game Project
 
 # Introduction
 
 During the third week of Ironhack Berlin's Summer Cohort, we were to create and deploy the first challenge. In this case, a game. We could choose between either DOM Manipulation or using P5.js library.
-After some research, brainstorming I decided to create this game - Casa de los bytes.
+After some research, brainstorming I decided to create this game - Casa de los .
 
 # What is the game?
 
-Inspired by Netflix show 'Casa de Papel' and other games from my youth, Casa de los bytes is a maze game.
+Inspired by Netflix show 'Casa de Papel' and other games from my youth, Casa de los byts is a maze game.
 The goal of the game is to go from the basement to the roof without getting caught by the security guards.
 
 ## Inspirations
@@ -54,11 +54,11 @@ Like I mentioned, there are different types of guards - there are 3:
 
 2. Still guards:
 
-- Guards that are just standing still. Ment to create a visual tip of where the player can go to. More of a corridor.
+- Guards that are just standing still. Meant to create a visual tip of where the player can go to. More of a corridor.
 
 3. Moving guards:
 
-- The hardest to create. Each has a position, a rotation, and a number of steps. These were extremely complicated to create, because of the continuos loop and the fact that, depedning on their amount of steps, they would have to call a specific a function _x_ number of times, before rotating and repeating. A "for loop" was not the way to go, for it's done too fast. The problem is that you need each function to be called on a specific frame rate, and not all of them at once.
+- The hardest to create. Each has a position, a rotation, and a number of steps. These were extremely complicated to create, because of the continuos loop and the fact that, depending on their amount of steps, they would have to call a specific a function _x_ number of times, before rotating and repeating. A "for loop" was not the way to go, for it's done too fast. The problem is that you need each function to be called on a specific frame rate, and not all of them at once.
 
 # Unsolved Problems (to be updated on a later date)
 
