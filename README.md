@@ -42,7 +42,7 @@ The guards are the real trouble makers in this game. There are guards on every l
 The guards have a different "size". Originally they were thought with the same size of the player - 100x100, but then I would have to figure out how to get a "field of view" to them. Creating a guard with a light already in the image turned out to be the easiest, most sensible solution for the time restraint.
 Here, it is important to define this Object's dimensions, and it's action area, because it's important for whoever is playing the game to immediately know where the thief can go without getting caught.
 
-![example of Guard](https://github.com/itstheandre/Casa-de-los-bytes/blob/master/assets/characters/light_guard/guard-right-light.png)
+![example of Guard](https://github.com/itstheandre/Casa-de-los-bytes/blob/master/assets/characters/guard-right-light.png)
 
 ### GuardExtensions
 
