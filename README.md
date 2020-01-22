@@ -1,11 +1,11 @@
-# Casa-de-los-byts
+# Casa-de-los-bytes
 
 Ironhack P5 Game Project
 
 # Introduction
 
 During the third week of Ironhack Berlin's Summer Cohort, we were to create and deploy the first challenge. In this case, a game. We could choose between either DOM Manipulation or using P5.js library.
-After some research, brainstorming I decided to create this game - Casa de los .
+After some research, brainstorming I decided to create this game - Casa de los bytes .
 
 # What is the game?
 

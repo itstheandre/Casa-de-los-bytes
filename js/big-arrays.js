@@ -1,3 +1,5 @@
+let platformsArr = [[new Platform()]];
+
 const mapArr = [
   // map
 
@@ -59,7 +61,11 @@ const mapArr = [
 
 const guards = [
   // map
-  [[1, 0, "down"], [3, 4, "left"], [1, 3, "left"]],
+  [
+    [1, 0, "down"],
+    [3, 4, "left"],
+    [1, 3, "left"]
+  ],
   // basement
   [],
   // first floor
