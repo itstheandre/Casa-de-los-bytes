@@ -1,0 +1,43 @@
+html{
+  font-size:10px;
+}
+body{
+  background-color: black;
+  color: white;
+}
+  .wrapper{
+    width:100vw;
+   
+  }
+  .gameScreen{
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+
+  #gameCanvas{
+    /* margin:0 auto; */
+    margin-top: 10rem;
+    margin-right:5rem;
+    display: flex;
+    justify-content: center;
+  }
+  #contentLeft{
+    margin-top: 7rem;
+    padding-left: 2rem;
+  }
+
+  #countdown{
+    font-size: 4rem
+  }
+
+  h1{
+    font-size: 4.2rem
+  }
+  h2{
+    font-size: 2rem;
+  }
+ 
+  ul{
+    font-size: 1.5rem
+  }
