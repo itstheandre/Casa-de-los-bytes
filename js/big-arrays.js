@@ -1,5 +1,5 @@
 // let platformsArr = [[new Platform()]];
-
+//
 const mapArr = [
   // map
 
